@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a, button {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.toast {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: white;
+    color: #444;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.shadow {
+    box-shadow: 0 0 10px 4px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechEd - APIs</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header class="h-20 w-full flex flex-row p-4 shadow-md">
+            <h1 class="text-3xl">TechEd - APIs</h1>
+        </header>
+
+        <main>
+            <h2 class="mt-4 text-2xl text-center font-bold">Random Fox API</h2>
+
+            <div
+                id="api-container"
+                class="h-[50vh] w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center p-4 rounded-sm shadow">
+                <img
+                    class="h-3/4 w-5/6 object-cover"
+                />
+                <a class="text-sm text-gray-500 underline"></a>
+
+                <div class="flex flex-row gap-8 mt-4">
+                    <button
+                        id="new-fox"
+                        class="px-4 py-2 rounded-lg bg-blue-400 hover:bg-blue-500 text-lg text-white">
+                        New Fox
+                    </button>
+
+                    <button
+                        id="share-fox"
+                        class="flex flex-row items-center px-4 py-2 rounded-lg bg-gray-300 hover:bg-gray-400 text-lg">
+                        <img
+                            class="h-5"
+                            src="share.svg"
+                            aria-hidden="true"
+                        />
+                        Share
+                    </button>
+                </div>
+            </div>
+
+            <div class="toast">Copied to clipboard</div>
+        </main>
+    </body>
+</html>
