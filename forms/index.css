@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    color: #FFF;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+input[type='date'],
+input[type='radio'] {
+    cursor: pointer;
+}
+
+form .container {
+    display: flex;
+    flex-direction: column;
+}
+
+form .container input {
+    padding: 0 0.25rem 0.25rem;
+    border-radius: 3px;
+    background: #DDD;
+    color: #000;
+}
+form .container input::placeholder {
+    color: #666;
+}
+form .container input:valid:not(:focus) {
+    border: solid 1px green;
+    background: #ccffcc;
+}
+form .container input:invalid:not(:placeholder-shown):not(:focus) {
+    border: solid 1px red;
+    background: #ffcccc;
+}
+
+form select {
+    padding: 0 0.25rem 0.25rem;
+    border-radius: 3px;
+    background: #DDD;
+    color: #000;
+}
+form select option {
+    color: #222;
+}
