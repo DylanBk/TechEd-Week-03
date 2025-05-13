@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEd - Timers</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-day: #4682B4;
+            --color-midnight: #222233;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TechEd - JS Timers</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="timer">
+                <h2 id="time"></h2>
+
+                <div class="flex flex-row gap-6">
+                    <button id="start" class="bg-day hover:bg-blue-500 disabled:hover:bg-day disabled:!cursor-not-allowed">Start</button>
+                    <button id="reset" class="bg-red-400 hover:bg-red-500">Reset</button>
+                </div>
+            </div>
+
+            <p id="message"></p>
+        </div>
+    </main>
+</body>
+</html>
