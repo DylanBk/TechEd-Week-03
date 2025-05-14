@@ -1,0 +1,113 @@
+:root {
+    --bg: #ffffff;
+    --text: #444;
+    --primary: #aaaaff;
+    --secondary: #ccccff;
+    --accent: #ddffdd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+h2 span:first-of-type {
+    color: var(--primary);
+    font-weight: 600;
+}
+h2 span:last-of-type {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+button {
+    padding: 1rem 1.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover {
+    scale: 1.05;
+}
+button.primary {
+    background: var(--primary);
+}
+button.secondary {
+    background: var(--secondary);
+}
+button.accent {
+    background: var(--accent);
+}
+
+#menu {
+    height: 3rem;
+    width: fit-content;
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 0.25);
+}
+
+#menu div {
+    position: relative;
+}
+
+#menu label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    user-select: none;
+    cursor: pointer;
+}
+
+#menu input[type='color'] {
+    height: 100%;
+    width: 6rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+#menu input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+#menu input:hover,
+#menu input:focus {
+    border: solid 1px black;
+}
+
+#boxes div.neutral {
+    background: lightgrey;
+}
+#boxes div.primary {
+    background: var(--primary);
+}
+#boxes div.secondary {
+    background: var(--secondary);
+}
+#boxes div.accent {
+    background: var(--accent);
+}
+
+.shadow{
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 0.25);
+}
