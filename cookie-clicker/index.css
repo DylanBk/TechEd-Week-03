@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'RubikGemstones';
-    src: url('/assets/fonts/RubikGemstones-Regular.ttf');
+    src: url('./assets/fonts/RubikGemstones-Regular.ttf');
 }
 
 @font-face {
@@ -30,16 +30,16 @@
     user-select: none;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
     max-height: 100vh;
     width: 100%;
     background: repeating-linear-gradient(45deg,
-        #606dbc,
-        #606dbc 40px,
-        #465298 40px,
-        #465298 80px
-    );
+            #606dbc,
+            #606dbc 40px,
+            #465298 40px,
+            #465298 80px);
     overflow: hidden;
 }
 
@@ -47,7 +47,8 @@ p {
     font-family: 'Geist';
 }
 
-a, button {
+a,
+button {
     transition: all 0.25s;
     cursor: pointer;
 }
@@ -55,6 +56,7 @@ a, button {
 button {
     background: var(--stone-100);
 }
+
 button:hover {
     background: var(--stone-200);
 }
@@ -72,6 +74,7 @@ button:hover {
     transition: all 0.2s;
     cursor: pointer;
 }
+
 #cookie:active {
     transform: translate(-50%, -50%) scale(1.1);
 }
@@ -81,6 +84,7 @@ button:hover {
         height: 30%;
     }
 }
+
 @media (max-width: 640px) {
     #cookie {
         height: 20%;
@@ -97,6 +101,7 @@ button:hover {
     80% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: translateY(500px) rotate(180deg);
@@ -106,6 +111,7 @@ button:hover {
 #cookie-shine1 {
     animation: spin 15s linear infinite;
 }
+
 #cookie-shine2 {
     animation: spin 15s linear infinite reverse;
 }
@@ -143,10 +149,12 @@ button:hover {
     background: var(--midnight-200);
     overflow-x: scroll;
 }
+
 #shop-items::-webkit-scrollbar {
     background: var(--midnight-200);
     border-radius: 1rem;
 }
+
 #shop-items::-webkit-scrollbar-thumb {
     background: var(--stone-300);
     border-radius: 1rem;
@@ -177,20 +185,24 @@ button:hover {
     transition: all 0.2s;
     cursor: pointer;
 }
+
 .shop-item:hover,
 .shop-item:focus {
     background: var(--stone-200);
 }
+
 .shop-item h3 {
     text-align: center;
     font-size: 1.25rem;
 }
+
 .shop-item p:first-of-type {
     position: absolute;
     left: 1rem;
     top: 1rem;
     font-family: 'RubikGemstones';
 }
+
 .shop-item p:last-of-type {
     vertical-align: bottom;
 }
