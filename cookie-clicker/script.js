@@ -79,7 +79,7 @@ const spawnCookie = (e) => {
     p.style.color = 'white';
 
     img.style.height = '20px';
-    img.style.width = 'auto';
+    img.style.width = '20px';
     img.style.borderRadius = 'calc(infinity * 1px)'
     img.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.5)';
     img.src = 'assets/media/images/cookie.svg';
