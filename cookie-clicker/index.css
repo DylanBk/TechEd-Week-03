@@ -1,0 +1,196 @@
+:root {
+    --midnight-100: #070829;
+    --midnight-200: #0d0e43;
+    --stone-100: #ddd;
+    --stone-200: #ccc;
+    --stone-300: #a0a0a0;
+}
+
+@font-face {
+    font-family: 'RubikGemstones';
+    src: url('/assets/fonts/RubikGemstones-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('./assets/fonts/Geist-VariableFont_wght.ttf');
+}
+
+.font-rubikgemstones {
+    font-family: 'RubikGemstones';
+}
+
+.font-geist {
+    font-family: 'Geist';
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'RubikGemstones';
+    user-select: none;
+}
+
+html, body {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    background: repeating-linear-gradient(45deg,
+        #606dbc,
+        #606dbc 40px,
+        #465298 40px,
+        #465298 80px
+    );
+    overflow: hidden;
+}
+
+p {
+    font-family: 'Geist';
+}
+
+a, button {
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+button {
+    background: var(--stone-100);
+}
+button:hover {
+    background: var(--stone-200);
+}
+
+#cookie {
+    height: 40%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 100rem;
+    box-shadow: 0 5px 15px 5px rgb(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+#cookie:active {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    #cookie {
+        height: 30%;
+    }
+}
+@media (max-width: 640px) {
+    #cookie {
+        height: 20%;
+        top: 70%;
+        bottom: 30%;
+    }
+}
+
+.animate-cookie-fall {
+    animation: cookie-fall 1s ease-in;
+}
+
+@keyframes cookie-fall {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(500px) rotate(180deg);
+    }
+}
+
+#cookie-shine1 {
+    animation: spin 15s linear infinite;
+}
+#cookie-shine2 {
+    animation: spin 15s linear infinite reverse;
+}
+
+@keyframes spin {
+    to {
+        rotate: 360deg;
+    }
+}
+
+#shop {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: var(--midnight-100);
+}
+
+#shop-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+    border-radius: 2rem 2rem 0.5rem 0.5rem;
+    margin-top: 1rem;
+    background: var(--midnight-200);
+    overflow-x: scroll;
+}
+#shop-items::-webkit-scrollbar {
+    background: var(--midnight-200);
+    border-radius: 1rem;
+}
+#shop-items::-webkit-scrollbar-thumb {
+    background: var(--stone-300);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 420px) {
+    #shop-items {
+        flex-wrap: nowrap;
+        justify-content: start;
+        overflow-x: hidden;
+    }
+}
+
+.shop-item {
+    height: 45%;
+    min-height: 10rem;
+    width: 20%;
+    min-width: 12rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    border-radius: 1rem;
+    background: white;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.shop-item:hover,
+.shop-item:focus {
+    background: var(--stone-200);
+}
+.shop-item h3 {
+    text-align: center;
+    font-size: 1.25rem;
+}
+.shop-item p:first-of-type {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-family: 'RubikGemstones';
+}
+.shop-item p:last-of-type {
+    vertical-align: bottom;
+}
