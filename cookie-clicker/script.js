@@ -179,7 +179,7 @@ const handleShopPurchase = (e) => {
 
     if (cookies >= upgrade.cost) {
         cookies -= upgrade.cost;
-        upgrade.cost = Math.round(upgrade.cost * 1.1);
+        upgrade.cost = Math.round(upgrade.cost * 1.25);
         upgradeTile.querySelector('p').textContent = `Cost: ${upgrade.cost}`;
 
 
